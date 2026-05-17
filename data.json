@@ -17,14 +17,6 @@
       "userId": "7f2e6c666e21ade84730dbfe89234782a8cb826fe34e7d990bfb2afec2da6270"
     },
     {
-      "lastUpdated": "2026-05-14T15:59:38.670092Z",
-      "nickname": "Anonymousse",
-      "totalRespawns": 33349,
-      "totalTimeSeconds": 190016,
-      "trackCount": 50,
-      "userId": "b0bb7d6383f29dc601aaafa40728ed7d9cafdb087d39ab4f6aff77ca75daad9e"
-    },
-    {
       "lastUpdated": "2026-05-17T19:15:38.849150Z",
       "nickname": "Tvirty",
       "totalRespawns": 21828,
@@ -567,6 +559,14 @@
       "totalTimeSeconds": 6290,
       "trackCount": 33,
       "userId": "dbae960eb789d20a874e8899d3b03aa8e5460f8e1b4b3804d879d05d0950f554"
+    },
+    {
+      "lastUpdated": "2026-05-17T21:06:00.102898Z",
+      "nickname": "hwadz",
+      "totalRespawns": 957,
+      "totalTimeSeconds": 6205,
+      "trackCount": 38,
+      "userId": "0242738c933112690c03077e63d1e5e6167029ddf2a4b909ae1736fb75c8b1bf"
     },
     {
       "lastUpdated": "2026-05-13T17:25:14.766612Z",
@@ -1313,11 +1313,11 @@
       "userId": "05140d521c3977056609dba57d464c8f59cece2f0ff8085bac41e3c7b6a0ac47"
     },
     {
-      "lastUpdated": "2026-05-11T03:11:43.333442Z",
+      "lastUpdated": "2026-05-17T20:08:30.964214Z",
       "nickname": "Anonymous",
       "totalRespawns": 322,
-      "totalTimeSeconds": 78,
-      "trackCount": 10,
+      "totalTimeSeconds": 82,
+      "trackCount": 11,
       "userId": "f33c782e0d94f4113499448a47e169f99241ac017a900ad9cff7e6a69abd211c"
     },
     {
