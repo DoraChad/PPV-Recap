@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>PPV Recap</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="modal-overlay" id="modal">
+        <div class="modal-card">
+            <div class="modal-eyebrow">WELCOME</div>
+            <h2 class="modal-title">Who Are You?</h2>
+            <p class="modal-sub">Pick your name to see your personalized recap.</p>
+
+            <input type="text"
+                class="modal-input"
+                id="searchInput"
+                placeholder="Type your name..."
+                autocomplete="off">
+
+            <div class="modal-suggestions" id="suggestions"></div>
+
+            <button class="modal-skip" id="skipBtn">Skip — show everyone's stats</button>
+        </div>
+    </div>
+    <div class="ui">
+        <div class="title-div">
+            <p class="title-small">Poliest Poly V</p>
+            <h1 class="title-big">FULL<br>RECAP<br><span class="name"></span></h1>
+            <p class="title-blurb">50 tracks. Over 150 participants. Thousands of attempts</p>
+            <p class="title-scroll">▼ ▼ ▼</p>
+        </div>
+
+        <!--Section 1 (Overall)-->
+        <section class="reveal">
+            <div class="section-header">
+                <p style="margin: 0;" class="green">✱</p>
+                <p style="margin: 0;">Overall...</p>
+            </div>
+            <div class="section-underline" style="background: #7bc96b;"></div>
+            <p class="section-sub">Everyones contributions</p>
+            <div class="grid">
+                <div class="grid-entry">
+                    <div class="tc-header">Number of Racers</div>
+                    <div class="tc-body"><div class="tc-data" style="color: #7bc96b;" data-count="0" id="total_players">0</div><span class="corner">▲</span></div>
+                    <div class="tc-footer">very competitive</div>
+                </div>
+
+                <div class="grid-entry">
+                    <div class="tc-header">Total Respawns</div>
+                    <div class="tc-body"><div class="tc-data" style="color: #ff5252;" data-count="0" id="total_respawns">0</div><span class="corner">▲</span></div>
+                    <div class="tc-footer">so many failed attempts</div>
+                </div>
+
+                <div class="grid-entry">
+                    <div class="tc-header">Total Hours</div>
+                    <div class="tc-body"><div class="tc-data" style="color: #e6c97a;" data-count="0" id="total_time" data-format="time">0</div><span class="corner">▲</span></div>
+                    <div class="tc-footer">a long grind</div>
+                </div>
+
+                <div class="grid-entry">
+                    <div class="tc-header">Tracks Finished</div>
+                    <div class="tc-body"><div class="tc-data" style="color: #9dd0ff;" data-count="49">0</div><span class="corner">▲</span></div>
+                    <div class="tc-footer">one remains unfinished</div>
+                </div>
+            </div>
+        </section>
+
+        <!--Section 2 (Most)-->
+        <section class="reveal">
+            <div class="section-header">
+                <p style="margin: 0;" class="red">♛</p>
+                <p style="margin: 0;">The Top 3</p>
+            </div>
+            <div class="section-underline" style="background: #ff5252;"></div>
+            <p class="section-sub">With the most time played, these three locked in</p>
+            <div class="podium-div">
+                <div class="podium-entry silver">
+                    <div class="pc-rank">02</div>
+                    <div class="pc-body">
+                        <div class="pc-name" id="silver_name">CSniper</div>
+                        <div class="pc-time" id="silver_time">59h 8m</div>
+                    </div>
+                    <div class="pc-stats">
+                        <div class="pc-stat"><div class="lbl">Respawns</div><div class="val" id="silver_resp">37,555</div></div>
+                    </div>
+                </div>
+                <div class="podium-entry gold">
+                    <div class="pc-rank">01</div>
+                    <div class="pc-body">
+                        <div class="pc-name" id="gold_name">Notobiv</div>
+                        <div class="pc-time" id="gold_time">59h 8m</div>
+                    </div>
+                    <div class="pc-stats">
+                        <div class="pc-stat"><div class="lbl">Respawns</div><div class="val" id="gold_resp">37,555</div></div>
+                    </div>
+                </div>
+                <div class="podium-entry bronze">
+                    <div class="pc-rank">03</div>
+                    <div class="pc-body">
+                        <div class="pc-name" id="bronze_name">Tvirty</div>
+                        <div class="pc-time" id="bronze_time">59h 8m</div>
+                    </div>
+                    <div class="pc-stats">
+                        <div class="pc-stat"><div class="lbl">Respawns</div><div class="val" id="bronze_resp">37,555</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Section 3 (Client)-->
+        <section class="reveal" id="personal">
+            <div class="section-header">
+                <p style="margin: 0;" class="yellow">︽</p>
+                <p style="margin: 0;">Your Data</p>
+            </div>
+            <div class="section-underline" style="background: #e6c97a;"></div>
+            <p class="section-sub">Lets see your individual playtime</p>
+            <div class="grid">
+                <div class="grid-entry">
+                    <div class="tc-header">Hours</div>
+                    <div class="tc-body"><div class="tc-data" style="color: #7bc96b;" data-count="0" id="client_hours" data-format="time">0</div><span class="corner">▲</span></div>
+                    <div class="tc-footer">devoted</div>
+                </div>
+
+                <div class="grid-entry">
+                    <div class="tc-header">Respawns</div>
+                    <div class="tc-body"><div class="tc-data" style="color: #ff5252;" data-count="0" id="client_resp">0</div><span class="corner">▲</span></div>
+                    <div class="tc-footer">you never gave up</div>
+                </div>
+
+                <div class="grid-entry">
+                    <div class="tc-header">Your Playtime Rank</div>
+                    <div class="tc-body"><div class="tc-data" style="color: #e6c97a;" data-count="0" id="client_rank">0</div><span class="corner">▲</span></div>
+                    <div class="tc-footer">elite</div>
+                </div>
+            </div>
+
+            <p class="section-sub">Impressive. But what percentage of the total are you?</p>
+            <div class="grid">
+                <div class="grid-entry">
+                    <div class="tc-header">% of Total Hours</div>
+                    <div class="tc-body"><div class="tc-data" style="color: #92ff7b;" data-count="0" id="client_hours_perc" data-format="percent">0</div><span class="corner">▲</span></div>
+                    <div class="tc-footer">game changer</div>
+                </div>
+
+                <div class="grid-entry">
+                    <div class="tc-header">% of Total Respawns</div>
+                    <div class="tc-body"><div class="tc-data" style="color: #ff8686;" data-count="0" id="client_resp_perc" data-format="percent">0</div><span class="corner">▲</span></div>
+                    <div class="tc-footer">you made an impact</div>
+                </div>
+
+                <div class="grid-entry">
+                    <div class="tc-header">Percentile</div>
+                    <div class="tc-body"><div class="tc-data" style="color: #ffefc2;" data-count="0" id="client_rank_perc" data-format="percent">0</div><span class="corner">▲</span></div>
+                    <div class="tc-footer">pure skill</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 (Chart) -->
+        <section class="reveal">
+            <div class="section-header">
+                <p style="margin: 0;" class="blue">≣</p>
+                <p style="margin: 0;" id="chart_title">Top Players</p>
+            </div>
+            <div class="section-underline" style="background: #9dd0ff;"></div>
+            <p class="section-sub" id="chart_sub">The most dedicated racers, to scale.</p>
+
+            <div class="chart-card">
+                <div class="drop-chart" id="dropChart">
+                    <div class="drop-ruler" id="dropRuler"></div>
+                    <div class="drop-bars" id="dropBars"></div>
+                    <div class="finish-line"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer>
+        <div class="title">SEE YOU<br>NEXT <span>SEASON</span></div>
+        <div class="credit">PPV Recap // The Poliest Poly Team</div>
+    </footer>
+    <script src="main.js"></script> 
+</body>
+</html>
